@@ -14,14 +14,14 @@ Guide a male albatross through the sky in this endless survival game. Dodge fall
 
 
 ###  Dynamics
--Players balance **risk and reward**: chase tuna for points while avoiding sticks.
--Rare water drops create **tense decision moments** since they're harder to reach.
--Escalating difficulty builds **pressure and urgency** the longer the run lasts.
+- Players balance **risk and reward**: chase tuna for points while avoiding sticks.
+- Rare water drops create **tense decision moments** since they're harder to reach.
+- Escalating difficulty builds **pressure and urgency** the longer the run lasts.
 
 
 ### Aesthetics 
 Experience the endurance of an albatross providing for its mate while soaring above the Pacific Coast Highway.
 
--**Challeneg:** Test reflexes and precision timing.
--**Sensation:** The thrill of weaving through falling hazards.
--**Survival Tension:** Every hit matters as health drains.
+- **Challeneg:** Test reflexes and precision timing.
+- **Sensation:** The thrill of weaving through falling hazards.
+- **Survival Tension:** Every hit matters as health drains.
