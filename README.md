@@ -9,7 +9,7 @@ Guide a male albatross through the sky in this endless survival game. Dodge fall
 - **Health Bar:** Starts at 100 ; each stick hit reduce it by 5.
 - **Scoring:** +10 points per tuna collected.
 - **Healing:** Rare falling water drops restore health for +2 points.
-- **Controls:** Tap or press spacebar flap upward.
+- **Controls:** Tap, click, or press spacebar flap upward.
 - **Difficulty Curve:** When player reach a score of 200 points objects start to fall faster and more often.
 
 
