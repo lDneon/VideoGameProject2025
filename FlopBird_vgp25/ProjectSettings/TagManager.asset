@@ -6,6 +6,7 @@ TagManager:
   tags:
   - stick
   - food
+  - water
   layers:
   - Default
   - TransparentFX
