@@ -7,6 +7,7 @@ TagManager:
   - stick
   - food
   - water
+  - levelbar_collide
   layers:
   - Default
   - TransparentFX
@@ -41,11 +42,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: background
     uniqueID: 914316951
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: foreground
     uniqueID: 725206387
