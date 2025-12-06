@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class object_collide : MonoBehaviour
+public class bird_health : MonoBehaviour
 {
+    public float health;
+
     // Start is called before the first frame update
-    void OnCollisionEnter2D(Collision2D collision)
+    void Start()
     {
-        Debug.Log("collision");
+        
     }
 
     // Update is called once per frame

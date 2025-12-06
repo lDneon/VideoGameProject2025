@@ -19,18 +19,21 @@ public class object_impact : MonoBehaviour
     void stickSpawn()
     {
         Vector3 pos = new Vector3(Random.Range(minX, maxX), spawnY, 0f);
-        Instantiate(stickPrefab, pos, Quaternion.identity);
+        GameObject stickClone = Instantiate(stickPrefab, pos, Quaternion.identity);
+        Destroy(stickClone, 5f);
     }
     void foodSpawn()
     {
         Vector3 pos = new Vector3(Random.Range(minX, maxX), spawnY, 0f);
-        Instantiate(foodPrefab, pos, Quaternion.identity);
+        GameObject foodclone = Instantiate(foodPrefab, pos, Quaternion.identity);
+        Destroy(foodclone, 5f);
     }
 
     void waterSpawn()
     {
         Vector2 pos = new Vector3(Random.Range(minX, maxX), spawnY, 0f);
-        Instantiate(waterPrefab, pos, Quaternion.identity);
+        GameObject waterClone = Instantiate(waterPrefab, pos, Quaternion.identity);
+        Destroy(waterClone, 5f);
     }
 
     // Start is called before the first frame update
@@ -52,9 +55,13 @@ public class object_impact : MonoBehaviour
 
 
 
+
     // Update is called once per frame
     void Update()
     {
         
+        
+        
+
     }
 }
