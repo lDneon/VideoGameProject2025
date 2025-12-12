@@ -4,15 +4,15 @@ using System.Collections;
 public class LevelGuard : MonoBehaviour
 {
     [Header("Background Settings")]
-    public Transform backgroundContainer;    // Drag the parent object here in Inspector
-    public float backgroundHeight = 20.8f;   // Height of one background (adjust to match your sprite/camera)
+    public Transform backgroundContainer;   
+    public float backgroundHeight = 20.8f;   
 
     [Header("Player Settings")]
-    public Transform player;                 // Drag your Player GameObject here in Inspector
-    public Transform playerSpawnPoint;       // Optional: Drag a empty GameObject at the starting position (e.g., at y=0)
+    public Transform player;                 
+    public Transform playerSpawnPoint;     
 
     private int currentLevel = 0;
-    private bool isTransitioning = false;    // Prevent spamming triggers during move
+    private bool isTransitioning = false;    // prevent spamming triggers during move
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,11 +21,11 @@ public class LevelGuard : MonoBehaviour
             isTransitioning = true;
             currentLevel++;
 
-            // Optional: loop after level 5
-            if (currentLevel > 5)
-                currentLevel = 1;
+            //loop game after level 5
+            //if (currentLevel > 5)
+                //currentLevel = 0;
 
-            // Calculate target positions
+            //calculating target positions
             float bgTargetY = (currentLevel - 1) * -backgroundHeight;
             Vector3 bgTargetPos = new Vector3(0, bgTargetY, 0);
 
@@ -33,12 +33,33 @@ public class LevelGuard : MonoBehaviour
             if (playerSpawnPoint != null)
                 playerTargetPos = playerSpawnPoint.position;
             else
-                playerTargetPos = new Vector3(0, 0, 0); // Hardcoded start (adjust X/Y as needed)
+                playerTargetPos = new Vector3(0, 0, 0); //adjust X/Y as needed)
 
-            // Smoothly move BOTH background AND player simultaneously
             StartCoroutine(SmoothTransition(bgTargetPos, playerTargetPos, 0.6f));
 
-            Debug.Log($"Moved to Level {currentLevel} - Bird reset to start!");
+            Debug.Log($"Moved to Level {currentLevel} Bird reset to start!");
+        }
+
+    }
+    public void ChangeBackground()
+    {
+        if (!isTransitioning)
+        {
+            isTransitioning = true;
+            currentLevel++;
+
+            if (currentLevel > 5)
+                currentLevel = 1;
+
+            //calculate target positions
+            float bgTargetY = (currentLevel - 1) * -backgroundHeight;
+            Vector3 bgTargetPos = new Vector3(0, bgTargetY, 0);
+
+            Vector3 playerTargetPos = playerSpawnPoint.position;
+
+            StartCoroutine(SmoothTransition(bgTargetPos, playerTargetPos, 0.6f));
+
+            Debug.Log($"Changed to Level {currentLevel} (Score Trigger)");
         }
     }
 
@@ -54,8 +75,8 @@ public class LevelGuard : MonoBehaviour
             float t = time / duration;
             t = t * t * (3f - 2f * t); // Smooth easing
 
-            // Move background DOWN
-            backgroundContainer.position = Vector3.Lerp(bgStartPos, bgTargetPos, t);
+           // Move background DOWN
+           // backgroundContainer.position = Vector3.Lerp(bgStartPos, bgTargetPos, t);
 
             // Move player UP to start
             player.position = Vector3.Lerp(playerStartPos, playerTargetPos, t);

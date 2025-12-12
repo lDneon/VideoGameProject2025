@@ -8,6 +8,9 @@ TagManager:
   - food
   - water
   - levelbar_collide
+  - LevelBlocker
+  - BirdHealth
+  - Score
   layers:
   - Default
   - TransparentFX
