@@ -2,6 +2,13 @@
 My final game project for Game Programming class
 
 
+<img width="1112" height="624" alt="Flopbird_gameplay" src="https://github.com/user-attachments/assets/21cbc4f4-3d63-4f97-bf9d-aa61c1b32226" />
+
+<img width="1087" height="612" alt="FlopBird_gameplay_level" src="https://github.com/user-attachments/assets/2d1b968c-92dc-4f73-93dc-4654d064f3eb" />
+
+###Game Controls >> Arrows up, left, right, down and WASD.
+###Game Objective >> You have 5 SECONDS to fly towards the birdhouse to go up a level for every 200 points gained.
+
 ### Pitch 
 Guide a male albatross through the sky in this endless survival game. Dodge falling sticks, collect tuna for points, and grab water drops to restore health as the challenge intensifies.
 
