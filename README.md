@@ -1,6 +1,6 @@
 ## VideoGameProject2025
 My final game project for Game Programming class
-
+### In this class I learned the basic of game design and programming, I also learned how to plan a project. Im confident that I can use my project planning skills in any other fields. Designing this game thought me the importance of trying differant approaches to solve a problem.
 
 <img width="1112" height="624" alt="Flopbird_gameplay" src="https://github.com/user-attachments/assets/21cbc4f4-3d63-4f97-bf9d-aa61c1b32226" />
 
