@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bird_health : MonoBehaviour
 {
@@ -16,10 +17,17 @@ public class Bird_health : MonoBehaviour
 
     }
 
+
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (currentHealth == 0)
+        {
+            Die();
+        }
+
         UpdateBar();
     }
 
@@ -39,5 +47,10 @@ public class Bird_health : MonoBehaviour
             originalScale.z
         );
 
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
